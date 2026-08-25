@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./preview.jpg" alt="Castle on a Lake in action" width="720" />
+  <img src="./preview.png" alt="Castle on a Lake in action" width="720" />
 </p>
 
 <h1 align="center">Castle on a Lake</h1>
@@ -25,14 +25,15 @@
 </p>
 
 <p align="center">
-  Terracotta accents, cream text, and mossy greens on a near-black canvas — a quiet, old-stone calm.
+  Warm stone, firelight, sage, lake reflections, and twilight violet on a near-black canvas — a quiet, old-stone calm.
 </p>
 
 ---
 
 Named after the four castle images it ships with (two paintings, each in day
-and night versions), the theme's palette is blended between its daytime and
-nighttime wallpapers so the colors sit naturally against both. And the
+and night versions), the theme's palette is drawn directly from colors in the
+paintings — sandstone, firelight, sage, lake reflections, storm sky, and
+twilight violet — so every hue has a natural anchor in the artwork. And the
 background **follows the sun**: it switches itself to the `-night` variant at
 sunset and back at sunrise.
 
@@ -42,11 +43,14 @@ sunset and back at sunrise.
   (see [below](#day--night-background-switching))
 - **Two castle paintings** by *Raphael Lacoste* — daytime and nighttime
   versions of two scenes
-- **Blended palette** — colors mixed between the day and night wallpapers so
-  they sit naturally against both
+- **Wallpaper-derived palette** — every color drawn from the castle paintings:
+  sandstone, firelight, sage, lake reflections, storm sky, twilight violet
+- **Custom Neovim theme** — full highlight groups (editor, syntax, Treesitter,
+  LSP, and popular plugins) built directly from the palette
 - **Theme-guarded helper** — only acts while this theme is active
-- **Whole-desktop coverage** — one `colors.toml` themes the desktop, shell,
-  terminals, Neovim, and more
+- **Whole-desktop coverage** — `colors.toml` themes the desktop, shell, and
+  terminals; a bundled `neovim.lua` covers the editor with full highlight
+  groups for syntax, Treesitter, LSP, and popular plugins
 
 ## Day / Night Background Switching
 
@@ -105,27 +109,36 @@ Or pick it under **Style > Theme** in the menu.
 
 ## Color Palette
 
-| Role | Swatch | Hex |
-|:---|:---|:---|
-| Background | ![](https://placehold.co/48x20/060606/060606) | `#060606` |
-| Dark background | ![](https://placehold.co/48x20/040404/040404) | `#040404` |
-| Lighter background | ![](https://placehold.co/48x20/1f1f1e/1f1f1e) | `#1f1f1e` |
-| Foreground | ![](https://placehold.co/48x20/f0d4e4/f0d4e4) | `#f0d4e4` |
-| Accent | ![](https://placehold.co/48x20/9b6b9f/9b6b9f) | `#9b6b9f` |
-| Muted | ![](https://placehold.co/48x20/626262/626262) | `#626262` |
-| Yellow | ![](https://placehold.co/48x20/eac283/eac283) | `#eac283` |
-| Orange | ![](https://placehold.co/48x20/c29176/c29176) | `#c29176` |
-| Green | ![](https://placehold.co/48x20/d0a46d/d0a46d) | `#d0a46d` |
-| Red | ![](https://placehold.co/48x20/b77e5f/b77e5f) | `#b77e5f` |
+| Role | Swatch | Hex | Wallpaper source |
+|:---|:---|:---|:---|
+| Background | ![](https://placehold.co/48x20/060606/060606) | `#060606` | Deep night shadows |
+| Dark background | ![](https://placehold.co/48x20/040404/040404) | `#040404` | Near-black canvas |
+| Lighter background | ![](https://placehold.co/48x20/1f1f1e/1f1f1e) | `#1f1f1e` | Dim stone surface |
+| Foreground | ![](https://placehold.co/48x20/f0d4e4/f0d4e4) | `#f0d4e4` | Cream text |
+| Accent | ![](https://placehold.co/48x20/9b6b9f/9b6b9f) | `#9b6b9f` | Mauve identity |
+| Muted | ![](https://placehold.co/48x20/626262/626262) | `#626262` | Weathered stone |
+| Red | ![](https://placehold.co/48x20/a06048/a06048) | `#a06048` | Warm sandstone in sunset light |
+| Yellow | ![](https://placehold.co/48x20/d4b060/d4b060) | `#d4b060` | Golden glow from lit windows |
+| Orange | ![](https://placehold.co/48x20/c47838/c47838) | `#c47838` | Copper firelight |
+| Green | ![](https://placehold.co/48x20/80a070/80a070) | `#80a070` | Sage from hillside vegetation |
+| Cyan | ![](https://placehold.co/48x20/6090a0/6090a0) | `#6090a0` | Slate-teal from lake reflections |
+| Blue | ![](https://placehold.co/48x20/5870a8/5870a8) | `#5870a8` | Storm blue from mountain sky |
+| Magenta | ![](https://placehold.co/48x20/8060a0/8060a0) | `#8060a0` | Twilight violet from night sky |
+| Brown | ![](https://placehold.co/48x20/5a4038/5a4038) | `#5a4038` | Dark castle stone |
 
 ## Theme Files
 
 ```
-colors.toml     Color palette
-backgrounds/    Wallpapers (day and night versions)
-icons.theme     Yaru-wartybrown icons
-daynight/       Day/night background switcher (see above)
-preview.jpg     Desktop preview
+colors.toml       Color palette (wallpaper-derived)
+neovim.lua        Custom Neovim colorscheme
+backgrounds/      Wallpapers (day and night versions)
+icons.theme       Yaru-wartybrown icons
+daynight/         Day/night background switcher (see above)
+unlock.png        Lock screen background
+preview.png       Desktop preview
+preview-unlock.png Lock screen preview
+CHANGELOG.md      Version history
+LICENSE           MIT license
 ```
 
 ## More from shmall03
@@ -150,8 +163,8 @@ Bugs, ideas, and tweaks are welcome — open an
 
 ## License
 
-The theme code — the color palette, icon config, day/night switcher scripts,
-and all other files except the artwork — is released under the
+The theme code — the color palette, Neovim theme, icon config, day/night
+switcher scripts, and all other files except the artwork — is released under the
 [MIT License](LICENSE), Copyright (c) 2026 Ben Smith.
 
 The bundled wallpapers are digital paintings by
@@ -173,5 +186,4 @@ down.
   the bundled wallpapers, as tagged and source-linked on
   [Wallhaven](https://wallhaven.cc)
   ([ogj6kp](https://wallhaven.cc/w/ogj6kp), [jedy6p](https://wallhaven.cc/w/jedy6p))
-- [Aether](https://github.com/bjarneo/aether) — color palette generation
 - [Omarchy](https://omarchy.org/) — the desktop this theme was made for
